@@ -2,22 +2,23 @@
 #include <vector>
 using namespace std;
 
-float get_average(vector<float> nums){
-  float sum = 0;
-  int count = 0;
+#include <vector>
+using namespace std;
+
+double calcAverage(const std::vector<int>& values){
+  double sum = 0;
   
-  for (int i = 0; i < nums.size(); i++)
+  
+  for (int i = 0; i < values.size(); i++)
   {
-    sum += nums[i];
-    count++;
+    sum += values[i];
   }
-  
-  return sum / nums.size();
+  return sum / values.size();
 }
 
 int main(){
   
-  cout << get_average({50, 40, 30, 80, 100}) << "\n";
+  cout << calcAverage({50, 40, 30, 80, 100}) << "\n";
   
   return 0;
 }

@@ -1,22 +1,27 @@
 #include <iostream>
 using namespace std;
 
-string first_char(string st){
-  string re = "";
-  re += toupper(st[0]);
-  for (int i = 0; i < st.length(); i ++){
-    if (st[i] == ' ')
+#include <string>
+
+std::string abbrevName(std::string name)
+{
+  std::string result = "";
+  
+    result += toupper(name[0]);
+  for (int i = 0; i < name.length(); i++)
+  {
+    if (name[i] == ' ')
     {
-      re += st[i];
-      re += toupper(st[i + 1]);
+      result += '.';
+      result += toupper(name[i + 1]);
     }
   }
-  return re;
+  return result;
 }
 
 int main(){
   
-  cout << first_char("reda jaber abdo") << "\n";
+  cout << abbrevName("reda jaber abdo") << "\n";
   
   return 0;
 }
