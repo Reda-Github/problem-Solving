@@ -1,15 +1,11 @@
-#include <iostream>
-using namespace std;
+/*
+A hero is on his way to the castle to complete his mission. However, he's been told that the castle is surrounded with a couple of powerful dragons! each dragon takes 2 bullets to be defeated, our hero has no idea how many bullets he should carry.. Assuming he's gonna grab a specific given number of bullets and move forward to fight another specific given number of dragons, will he survive?
+*/
 
-int check(int boletus, int dragon){
-  return boletus >= dragon * 2 ? true : false;
-}
-
-int main(){
+bool hero(int bullets, int dragons) {
+//   if (bullets >= dragons * 2)
+//     return true;
   
-  cout << check(10, 5) << "\n";
-  cout << check(10, 2) << "\n";
-  cout << check(10, 7) << "\n";
-  
-  return 0;
+//   return false;
+  return bullets/dragons >= 2 ? true : false;
 }

@@ -1,6 +1,10 @@
 #include <iostream>
 using namespace std;
 
+/*
+Write a function which converts the input string to uppercase.
+*/
+
 string make_uppercase(string str){
   string re = "";
   
