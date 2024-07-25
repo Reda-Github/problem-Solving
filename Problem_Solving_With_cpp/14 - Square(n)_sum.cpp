@@ -1,19 +1,11 @@
-#include <iostream>
 #include <vector>
-using namespace std;
 
-int sqr(vector<int> nums){
+int square_sum(const std::vector<int>& numbers)
+{
   int sum = 0;
-  
-  for (int i = 0; i < nums.size(); i++)
-    sum += (nums[i] * nums[i]);
-  
+  for (int i : numbers)
+  {
+    sum += i*i;
+  }
   return sum;
-}
-
-int main(){
-  
-  cout << sqr({1, 2, 2}) << "\n";
-  
-  return 0;
 }

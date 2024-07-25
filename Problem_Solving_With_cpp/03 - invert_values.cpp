@@ -1,14 +1,13 @@
 #include <vector>
+using namespace std;
 
-std::vector<int> invert(std::vector<int> values)
+/*
+Given a set of numbers, return the additive inverse of each. Each positive becomes negatives, and the negatives become positives.
+*/
+
+vector<int> invert(vector<int> v)
 {
-  for (int i = 0; i < values.size(); i ++){
-    values[i] *= -1; 
-  }
-  return values;
-}
-
-int main(){
-
-  return 0;
+  for (int i = 0; i < v.size(); i++) v[i] *= -1;
+  
+  return v;
 }
