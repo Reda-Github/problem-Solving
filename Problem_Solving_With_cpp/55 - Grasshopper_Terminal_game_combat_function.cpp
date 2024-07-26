@@ -5,6 +5,6 @@ Create a combat function that takes the player's current health and the amount o
 */
 
 
-int combat(int health, int damage){
-  return health > damage ? health - damage : 0;
+int combat(int h, int d){
+  return h < d ? 0 : h - d;
 }
