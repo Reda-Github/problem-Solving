@@ -6,7 +6,7 @@
 #include <algorithm>
 using namespace std;
 vector<int> digitize(unsigned long n) 
-{  
+{        
   vector<int> sum_arr;
   string str = to_string(n);
   reverse(str.begin(), str.end());
