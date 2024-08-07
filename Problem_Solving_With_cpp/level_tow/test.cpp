@@ -1,29 +1,27 @@
+#include<vector>
 #include <iostream>
-#include <string>
-using namespace std;
 
-#include <vector>
-#include <string>
-
-vector<int> solve(vector<string> arr) {  
-  
-  vector<int> sum;
-  int count = 1;
-  
+long elementsSum(const std::vector<std::vector<int>>& arr, int d = 0){
+  long result = 0;
+  int index = arr.size();
   for (int i = 0; i < arr.size(); i++)
-  {
-    for (int j = 0; j < arr[i].size(); j++)
+  { 
+    int count = index - 1 - i;
+    if (arr[i].size() > count)
     {
-      cout << arr[i][j] << "-";
+      result += arr[i][count];
+    }
+    else
+    {
+      result += d;
     }
   }
-  return {};
-};
-
+  return result;
+}
 
 int main(){
   
-  // if (int(97) == char('a')) cout << true;
-  solve({ "abode", "ABc", "xyzD" });
+  std::cout << elementsSum({{3}, {4, 6, 5, 3, 2}, {10, 8, 7, 4}});
+  
   return 0;
 }
